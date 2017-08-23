@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[test.md]]></title>
-      <url>/wiki/uncategorized/test-md/</url>
+      <url>/uncategorized/test-md/</url>
       <content type="html"><![CDATA[<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ol>
 <li>pow 返回浮点数可能会导致误差，慎用！！！自己写。</li>
 <li>样例数用 long long 可能会 TLE</li>
@@ -163,7 +163,7 @@
     
     <entry>
       <title><![CDATA[tag-plugins]]></title>
-      <url>/wiki/uncategorized/tag-plugins/</url>
+      <url>/uncategorized/tag-plugins/</url>
       <content type="html"><![CDATA[<p>和 <a href="http://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Freemind</a> 一样，你可以使用 <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> 来充分发挥 Bootstrap 的威力。在你的 Hexo 博客目录，执行下列命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
 <p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p>
