@@ -1,11 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search> 
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-    
-    <entry>
-      <title><![CDATA[test.md]]></title>
-      <url>/wiki/uncategorized/test-md/</url>
-      <content type="html"><![CDATA[<h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ol>
+  <title>test.md | Wiki</title>
+  <meta name="author" content="Tianshu Wang">
+  
+  <meta name="description" content="Tianshu Wang&#39;s Personal Wiki Page">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="test.md"/>
+  <meta property="og:site_name" content="Wiki"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Wiki</a><span class="split"></span><span class="title">test.md</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-08-23</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h1 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h1><ol>
 <li>pow 返回浮点数可能会导致误差，慎用！！！自己写。</li>
 <li>样例数用 long long 可能会 TLE</li>
 <li>多组数据记得初始化</li>
@@ -156,68 +218,104 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// AC 自动机</span></div><div class="line"><span class="keyword">int</span> ans[MAX_N], d[MAX_N];</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Trie</span> &#123;</span></div><div class="line">    <span class="keyword">int</span> nxt[MAX_N][<span class="number">26</span>], fail[MAX_N], end[MAX_N];</div><div class="line">    <span class="keyword">int</span> root, L;</div><div class="line">    <span class="function"><span class="keyword">int</span> <span class="title">newnode</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">26</span>; i++)</div><div class="line">            nxt[L][i] = <span class="number">-1</span>;</div><div class="line">        end[L++] = <span class="number">0</span>;</div><div class="line">        <span class="keyword">return</span> L<span class="number">-1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</div><div class="line">        L = <span class="number">0</span>;</div><div class="line">        root = newnode();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">char</span> buf[])</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> len = <span class="built_in">strlen</span>(buf);</div><div class="line">        <span class="keyword">int</span> now = root;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">            <span class="keyword">if</span>(nxt[now][buf[i]-<span class="string">'a'</span>] == <span class="number">-1</span>)</div><div class="line">                nxt[now][buf[i]-<span class="string">'a'</span>] = newnode();</div><div class="line">            now = nxt[now][buf[i]-<span class="string">'a'</span>];</div><div class="line">        &#125;</div><div class="line">        end[now] = <span class="number">1</span>;</div><div class="line">        d[now] = len;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; Q;</div><div class="line">        fail[root] = root;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">26</span>; i++)</div><div class="line">            <span class="keyword">if</span>(nxt[root][i] == <span class="number">-1</span>)</div><div class="line">                nxt[root][i] = root;</div><div class="line">            <span class="keyword">else</span> &#123;</div><div class="line">                fail[nxt[root][i]] = root;</div><div class="line">                Q.push(nxt[root][i]);</div><div class="line">            &#125;</div><div class="line">        <span class="keyword">while</span>( !Q.empty() ) &#123;</div><div class="line">            <span class="keyword">int</span> now = Q.front(); Q.pop();</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">26</span>; i++)</div><div class="line">                <span class="keyword">if</span>(nxt[now][i] == <span class="number">-1</span>)</div><div class="line">                    nxt[now][i] = nxt[fail[now]][i];</div><div class="line">                <span class="keyword">else</span> &#123;</div><div class="line">                    fail[nxt[now][i]] = nxt[fail[now]][i];</div><div class="line">                    Q.push(nxt[now][i]);</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">solve</span><span class="params">(<span class="keyword">char</span> buf[])</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> cur = root;</div><div class="line">        <span class="keyword">int</span> len = <span class="built_in">strlen</span>(buf);</div><div class="line">        <span class="keyword">int</span> index;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; ++i) &#123;</div><div class="line">            <span class="keyword">if</span>(buf[i] &gt;= <span class="string">'A'</span> &amp;&amp; buf[i] &lt;= <span class="string">'Z'</span>)</div><div class="line">                index = buf[i] - <span class="string">'A'</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(buf[i] &gt;= <span class="string">'a'</span> &amp;&amp; buf[i] &lt;= <span class="string">'z'</span>)</div><div class="line">                index = buf[i] - <span class="string">'a'</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">continue</span>;</div><div class="line">            cur = nxt[cur][index];</div><div class="line">            <span class="keyword">int</span> x = cur;</div><div class="line">            <span class="keyword">while</span>(x != root) &#123;</div><div class="line">                <span class="keyword">if</span>(end[x]) &#123;</div><div class="line">                    ans[i + <span class="number">1</span>] -= <span class="number">1</span>;</div><div class="line">                    ans[i - d[x] + <span class="number">1</span>] += <span class="number">1</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">                x = fail[x];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Trie ac;</div></pre></td></tr></table></figure>
 <hr>
 <h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><h2 id="Divide-and-Conquer-Tree"><a href="#Divide-and-Conquer-Tree" class="headerlink" title="Divide-and-Conquer Tree"></a>Divide-and-Conquer Tree</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//uva 12161</span></div><div class="line"><span class="class"><span class="keyword">struct</span> <span class="title">edge</span> &#123;</span></div><div class="line">    <span class="keyword">int</span> to, damage, length, next;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">int</span> G[MAX_N], En, N, M, T;</div><div class="line">edge E[MAX_N * <span class="number">2</span>];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_edge</span><span class="params">(<span class="keyword">int</span> from, <span class="keyword">int</span> to, <span class="keyword">int</span> damage, <span class="keyword">int</span> length)</span> </span>&#123;</div><div class="line">    edge e = &#123;to, damage, length, G[from]&#125;;</div><div class="line">    E[En] = e;</div><div class="line">    G[from] = En++;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">int</span> ans, subtree_size[MAX_N];</div><div class="line"><span class="keyword">bool</span> flag[MAX_N];</div><div class="line"></div><div class="line"><span class="keyword">int</span> s, t;</div><div class="line">Pii ds[MAX_N];</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">compute_subtree_size</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> p)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> c = <span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = G[v]; ~j; j = E[j].next) &#123;</div><div class="line">        <span class="keyword">int</span> w = E[j].to;</div><div class="line">        <span class="keyword">if</span> (w == p || flag[w]) <span class="keyword">continue</span>;</div><div class="line">        c += compute_subtree_size(w, v);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> subtree_size[v] = c;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function">Pii <span class="title">search_centroid</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> p, <span class="keyword">int</span> t)</span> </span>&#123;</div><div class="line">    Pii res = Pii(INT_MAX, <span class="number">-1</span>);</div><div class="line">    <span class="keyword">int</span> s = <span class="number">1</span>, m = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = G[v]; ~j; j = E[j].next) &#123;</div><div class="line">        <span class="keyword">int</span> w = E[j].to;</div><div class="line">        <span class="keyword">if</span> (w == p || flag[w]) <span class="keyword">continue</span>;</div><div class="line">        res = min(res, search_centroid(w, v, t));</div><div class="line">        m = max(subtree_size[w], m);</div><div class="line">        s += subtree_size[w];</div><div class="line">    &#125;</div><div class="line">    m = max(m, t - s);</div><div class="line">    res = min(res, Pii(m, v));</div><div class="line">    <span class="keyword">return</span> res;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">enumrate_path</span><span class="params">(<span class="keyword">int</span> v, <span class="keyword">int</span> p, <span class="keyword">int</span> damage, <span class="keyword">int</span> length)</span> </span>&#123;</div><div class="line">    ds[t++] = Pii(damage, length);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = G[v]; ~j; j = E[j].next) &#123;</div><div class="line">        <span class="keyword">int</span> w = E[j].to;</div><div class="line">        <span class="keyword">if</span> (w == p || flag[w]) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (damage + E[j].damage &lt;= M) &#123;</div><div class="line">            enumrate_path(w, v, damage + E[j].damage, length + E[j].length);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove_useless</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> &amp;t)</span> </span>&#123;</div><div class="line">    <span class="keyword">if</span> (s == t) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">int</span> tt;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = tt = s + <span class="number">1</span>; i &lt; t; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (ds[i].first == ds[tt - <span class="number">1</span>].first) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (ds[i].second &lt;= ds[tt - <span class="number">1</span>].second) <span class="keyword">continue</span>;</div><div class="line">        ds[tt++] = ds[i];</div><div class="line">    &#125;</div><div class="line">    t = tt;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">solve_sub_problem</span><span class="params">(<span class="keyword">int</span> v)</span> </span>&#123;</div><div class="line">    compute_subtree_size(v, <span class="number">-1</span>);</div><div class="line">    <span class="keyword">int</span> c = search_centroid(v, <span class="number">-1</span>, subtree_size[v]).second;</div><div class="line">    flag[c] = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = G[c]; ~j; j = E[j].next) &#123;</div><div class="line">        <span class="keyword">if</span> (flag[E[j].to]) <span class="keyword">continue</span>;</div><div class="line">        solve_sub_problem(E[j].to);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    s = t = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = G[c]; ~j; j = E[j].next) &#123;</div><div class="line">        <span class="keyword">int</span> w = E[j].to;</div><div class="line">        <span class="keyword">if</span> (flag[w]) <span class="keyword">continue</span>;</div><div class="line">        <span class="keyword">if</span> (E[j].damage &lt;= M)</div><div class="line">            enumrate_path(w, v, E[j].damage, E[j].length);</div><div class="line">        <span class="keyword">if</span> (s &gt; <span class="number">0</span>) &#123;</div><div class="line">            sort(ds + s, ds + t);</div><div class="line">            remove_useless(s, t);</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">0</span>, r = t - <span class="number">1</span>; l &lt; s &amp;&amp; r &gt;= s; l++) &#123;</div><div class="line">                <span class="keyword">while</span> (r &gt;= s &amp;&amp; ds[l].first + ds[r].first &gt; M) r--;</div><div class="line">                <span class="keyword">if</span> (r &gt;= s)</div><div class="line">                    ans = max(ans, ds[l].second + ds[r].second);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        sort(ds, ds + t);</div><div class="line">        remove_useless(<span class="number">0</span>, t);</div><div class="line">        s = t;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    flag[c] = <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[tag-plugins]]></title>
-      <url>/wiki/uncategorized/tag-plugins/</url>
-      <content type="html"><![CDATA[<p>和 <a href="http://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Freemind</a> 一样，你可以使用 <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> 来充分发挥 Bootstrap 的威力。在你的 Hexo 博客目录，执行下列命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
-<p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p>
-<h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>插入一段文本，并用特殊的颜色高亮它。</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor [style] %&#125;</div><div class="line">  text string</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor muted %&#125;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor primary %&#125;Nullam id dolor id nibh ultricies vehicula ut id elit.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor success %&#125;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor info %&#125;Maecenas sed diam eget risus varius blandit sit amet non magna.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor warning %&#125;Etiam porta sem malesuada magna mollis euismod.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor danger %&#125;Donec ullamcorper nulla non metus auctor fringilla.&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+	  
 
-<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/wiki/uncategorized/tag-plugins/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
 
-<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
 
-<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
-<h2 id="按钮（Buttons）"><a href="#按钮（Buttons）" class="headerlink" title="按钮（Buttons）"></a>按钮（Buttons）</h2><p>插入一个按钮，按钮可以带有链接、文本，并可以指定样式。</p>
-<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% btn url text [style] %&#125;</div></pre></td></tr></table></figure>
-<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% btn http://hahack.com hahack %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack primary %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack success %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack warning %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack danger %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack info %&#125;</div></pre></td></tr></table></figure>
-<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><a class="btn btn-default" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-<a class="btn btn-primary" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-<a class="btn btn-success" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-<a class="btn btn-warning" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-<a class="btn btn-danger" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-<a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a>
-<h2 id="标签（Labels）"><a href="#标签（Labels）" class="headerlink" title="标签（Labels）"></a>标签（Labels）</h2><p>插入一个标签，并为其指定文本和样式。</p>
-<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% label text [style] %&#125;</div></pre></td></tr></table></figure>
-<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% label default %&#125;</div><div class="line"></div><div class="line">&#123;% label warinng warning %&#125;</div><div class="line"></div><div class="line">&#123;% label success success %&#125;</div><div class="line"></div><div class="line">&#123;% label danger danger %&#125;</div><div class="line"></div><div class="line">&#123;% label primary primary %&#125;</div><div class="line"></div><div class="line">&#123;% label info info %&#125;</div></pre></td></tr></table></figure>
-<h3 id="结果-2"><a href="#结果-2" class="headerlink" title="结果"></a>结果</h3><span class="label label-default">default</span>
-<span class="label label-warning">warinng</span>
-<span class="label label-success">success</span>
-<span class="label label-danger">danger</span>
-<span class="label label-primary">primary</span>
-<span class="label label-info">info</span>
-<h2 id="徽章（Badges）"><a href="#徽章（Badges）" class="headerlink" title="徽章（Badges）"></a>徽章（Badges）</h2><p>插入一个徽章，并为其指定文本。</p>
-<h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge text %&#125;</div></pre></td></tr></table></figure>
-<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge 42 %&#125;</div></pre></td></tr></table></figure>
-<h3 id="结果-3"><a href="#结果-3" class="headerlink" title="结果"></a>结果</h3><span class="badge">42</span>
-<h2 id="警报（Alerts）"><a href="#警报（Alerts）" class="headerlink" title="警报（Alerts）"></a>警报（Alerts）</h2><p>插入一段警报文本信息，并为其指定样式。</p>
-<h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% alert [style] %&#125;</div><div class="line">   Alert string</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure>
-<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;% alert warning %&#125;Best check yo self, you&apos;re not looking too good.&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert danger %&#125;Change a few things up and try submitting again.&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert success %&#125;You successfully read this important alert message.&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert info %&#125;This alert needs your attention, but it&apos;s not super important.&#123;% endalert %&#125;</div></pre></td></tr></table></figure>
-<h3 id="结果-4"><a href="#结果-4" class="headerlink" title="结果"></a>结果</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div>
-
-<div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div>
-<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div>
-
-<div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>
-<p>~/Documents/Wiki/source/_drafts/tag-plugins-md.md</p>
-]]></content>
-      
-        
-    </entry>
-    
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2017 Tianshu Wang
   
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
   
-    
-  
-</search>
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+<script src="/wiki/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/wiki/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>tag-plugins | Wiki</title>
+  <meta name="author" content="Tianshu Wang">
+  
+  <meta name="description" content="Tianshu Wang&#39;s Personal Wiki Page">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="tag-plugins"/>
+  <meta property="og:site_name" content="Wiki"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/wiki/atom.xml" title="Wiki" type="application/atom+xml">
+  
+  
+    <link href="/wiki/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/wiki/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/wiki/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/wiki/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/wiki/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/wiki/">Wiki</a><span class="split"></span><span class="title">tag-plugins</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-08-23</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <p>和 <a href="http://github.com/wzpan/hexo-theme-freemind" target="_blank" rel="external">Freemind</a> 一样，你可以使用 <a href="https://github.com/wzpan/hexo-tag-bootstrap" target="_blank" rel="external">hexo-tag-bootstrap</a> 来充分发挥 Bootstrap 的威力。在你的 Hexo 博客目录，执行下列命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-tag-bootstrap --save</div></pre></td></tr></table></figure>
+<p>然后就可以像使用其他 hexo tag plugins 一样使用这些 Bootstrap tag plugins 了。</p>
+<h2 id="文本颜色"><a href="#文本颜色" class="headerlink" title="文本颜色"></a>文本颜色</h2><p>插入一段文本，并用特殊的颜色高亮它。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor [style] %&#125;</div><div class="line">  text string</div><div class="line">&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% textcolor muted %&#125;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor primary %&#125;Nullam id dolor id nibh ultricies vehicula ut id elit.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor success %&#125;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor info %&#125;Maecenas sed diam eget risus varius blandit sit amet non magna.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor warning %&#125;Etiam porta sem malesuada magna mollis euismod.&#123;% endtextcolor %&#125;</div><div class="line"></div><div class="line">&#123;% textcolor danger %&#125;Donec ullamcorper nulla non metus auctor fringilla.&#123;% endtextcolor %&#125;</div></pre></td></tr></table></figure>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+
+<p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+<p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+
+<p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+<h2 id="按钮（Buttons）"><a href="#按钮（Buttons）" class="headerlink" title="按钮（Buttons）"></a>按钮（Buttons）</h2><p>插入一个按钮，按钮可以带有链接、文本，并可以指定样式。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% btn url text [style] %&#125;</div></pre></td></tr></table></figure>
+<h3 id="示例-1"><a href="#示例-1" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% btn http://hahack.com hahack %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack primary %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack success %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack warning %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack danger %&#125;</div><div class="line"></div><div class="line">&#123;% btn http://hahack.com hahack info %&#125;</div></pre></td></tr></table></figure>
+<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><a class="btn btn-default" href="http://hahack.com" target="_blank" rel="external">hahack</a>
+<a class="btn btn-primary" href="http://hahack.com" target="_blank" rel="external">hahack</a>
+<a class="btn btn-success" href="http://hahack.com" target="_blank" rel="external">hahack</a>
+<a class="btn btn-warning" href="http://hahack.com" target="_blank" rel="external">hahack</a>
+<a class="btn btn-danger" href="http://hahack.com" target="_blank" rel="external">hahack</a>
+<a class="btn btn-info" href="http://hahack.com" target="_blank" rel="external">hahack</a>
+<h2 id="标签（Labels）"><a href="#标签（Labels）" class="headerlink" title="标签（Labels）"></a>标签（Labels）</h2><p>插入一个标签，并为其指定文本和样式。</p>
+<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% label text [style] %&#125;</div></pre></td></tr></table></figure>
+<h3 id="示例-2"><a href="#示例-2" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&#123;% label default %&#125;</div><div class="line"></div><div class="line">&#123;% label warinng warning %&#125;</div><div class="line"></div><div class="line">&#123;% label success success %&#125;</div><div class="line"></div><div class="line">&#123;% label danger danger %&#125;</div><div class="line"></div><div class="line">&#123;% label primary primary %&#125;</div><div class="line"></div><div class="line">&#123;% label info info %&#125;</div></pre></td></tr></table></figure>
+<h3 id="结果-2"><a href="#结果-2" class="headerlink" title="结果"></a>结果</h3><span class="label label-default">default</span>
+<span class="label label-warning">warinng</span>
+<span class="label label-success">success</span>
+<span class="label label-danger">danger</span>
+<span class="label label-primary">primary</span>
+<span class="label label-info">info</span>
+<h2 id="徽章（Badges）"><a href="#徽章（Badges）" class="headerlink" title="徽章（Badges）"></a>徽章（Badges）</h2><p>插入一个徽章，并为其指定文本。</p>
+<h3 id="语法-3"><a href="#语法-3" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge text %&#125;</div></pre></td></tr></table></figure>
+<h3 id="示例-3"><a href="#示例-3" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% badge 42 %&#125;</div></pre></td></tr></table></figure>
+<h3 id="结果-3"><a href="#结果-3" class="headerlink" title="结果"></a>结果</h3><span class="badge">42</span>
+<h2 id="警报（Alerts）"><a href="#警报（Alerts）" class="headerlink" title="警报（Alerts）"></a>警报（Alerts）</h2><p>插入一段警报文本信息，并为其指定样式。</p>
+<h3 id="语法-4"><a href="#语法-4" class="headerlink" title="语法"></a>语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;% alert [style] %&#125;</div><div class="line">   Alert string</div><div class="line">&#123;% endalert %&#125;</div></pre></td></tr></table></figure>
+<h3 id="示例-4"><a href="#示例-4" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;% alert warning %&#125;Best check yo self, you&apos;re not looking too good.&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert danger %&#125;Change a few things up and try submitting again.&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert success %&#125;You successfully read this important alert message.&#123;% endalert %&#125;</div><div class="line"></div><div class="line">&#123;% alert info %&#125;This alert needs your attention, but it&apos;s not super important.&#123;% endalert %&#125;</div></pre></td></tr></table></figure>
+<h3 id="结果-4"><a href="#结果-4" class="headerlink" title="结果"></a>结果</h3><div class="alert alert-warning"><i class="fa fa-bell"></i>  Best check yo self, you're not looking too good.</div>
+
+<div class="alert alert-danger"><i class="fa fa-bug"></i>  Change a few things up and try submitting again.</div>
+<div class="alert alert-success"><i class="fa fa-lightbulb-o"></i>  You successfully read this important alert message.</div>
+
+<div class="alert alert-info"><i class="fa fa-info"></i>  This alert needs your attention, but it's not super important.</div>
+<p>~/Documents/Wiki/source/_drafts/tag-plugins-md.md</p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+		
+	
+		
+			
+			
+		
+	
+	
+	
+		<li class="prev"><a href="/wiki/uncategorized/test-md/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/wiki/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2017 Tianshu Wang
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/wiki/js/jquery.imagesloaded.min.js"></script>
+<script src="/wiki/js/gallery.js"></script>
+<script src="/wiki/js/bootstrap.min.js"></script>
+<script src="/wiki/js/jquery.tableofcontents.min.js"></script>
+<script src="/wiki/js/tocgenerator.min.js"></script>
+<script src="/wiki/js/main.js"></script>
+<script src="/wiki/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/wiki/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/wiki/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/wiki/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>

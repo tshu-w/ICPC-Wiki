@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <title>archive_b | Wiki</title>
   <meta name="author" content="Tianshu Wang">
@@ -36,13 +36,13 @@
 
   <script src="/wiki/js/jquery-2.0.3.min.js"></script>
 
-  <!-- analytics -->
+  <!-- analytics --><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 </head>
 
 <body id="body" data-spy="scroll" data-target=".toc">
-  <div class="container" id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">
   <h1><a class="brand" href="#">Wiki</a></h1>
@@ -52,7 +52,7 @@
 
 <div class="row page">
 	<div class="col-md-12">
-        <input type="text" id="local-search-input" name="q" results="0" placeholder="查找笔记……" class="st-search-input st-default-search-input form-control" style="margin-bottom:1em"/>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="search notes..." class="st-search-input st-default-search-input form-control" style="margin-bottom:1em"/>
         <div id="local-search-result"></div>
 		<div class="panel-group" id="notebook">
 			
@@ -76,11 +76,11 @@
 			
 			    
 			                    
-			                    <li class="post-list-item"><a href="/wiki/uncategorized/hello-world/">Hello World</a></li>
+			                    <li class="post-list-item"><a href="/wiki/uncategorized/tag-plugins/">tag-plugins</a></li>
 			                    
 			    
 			                    
-			                    <li class="post-list-item"><a href="/wiki/uncategorized/test/">test</a></li>
+			                    <li class="post-list-item"><a href="/wiki/uncategorized/test-md/">test.md</a></li>
 			                    
 			    
 				            </ul>
@@ -137,5 +137,20 @@
    </script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
