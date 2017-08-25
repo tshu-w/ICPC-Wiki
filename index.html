@@ -56,6 +56,32 @@
         <div id="local-search-result"></div>
 		<div class="panel-group" id="notebook">
 			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<a class="panel-title" data-toggle="collapse" data-parent="#notebook" href="#ACM">
+						<i class="fa fa-folder"></i> ACM		  
+				</div>
+				
+					<div id="ACM" class="panel-collapse collapse in">
+				
+						<div class="panel-body">
+							<ul class="post">                                
+								
+								    
+								
+								    
+								        <li class="post-list-item"><a href="/ACM/acm-template/">ACM template</a></li>
+								    
+								
+								    
+								        <li class="post-list-item"><a href="/ACM/algorithms-list/">Algorithms List</a></li>
+								    
+								
+							</ul>
+						</div>
+					</div>
+			</div>
+			
 			
 			
 			
@@ -72,9 +98,17 @@
 						    <ul class="post">
 			
 			
+			
+			
+			
+			
 			    
 			                    
 			                    <li class="post-list-item"><a href="/uncategorized/tag-plugins/">tag-plugins</a></li>
+			                    
+			    
+			                    
+			    
 			                    
 			    
 				            </ul>
@@ -128,8 +162,23 @@
 	 }
 	 var path = "/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+   </script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
