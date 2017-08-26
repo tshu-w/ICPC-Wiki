@@ -305,22 +305,4 @@
     
   
   
-    
-    <entry>
-      <title></title>
-      <url>/404.html</url>
-      <content type="html"><![CDATA[<!DOCTYPE html>
-<html>
-<head>
-	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-	<title>404 | hexo-theme-wixo</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</head>
-<body>
-	<!-- hexo-inject:begin --><!-- hexo-inject:end --><h1>OMG, failed to find this article! </h1><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-</body>
-</html>
-]]></content>
-    </entry>
-    
-  
 </search>
