@@ -53,7 +53,7 @@
 <h2 id="game-theory">Game theory</h2>
 <p>Nim 博弈，双人零和矩阵博弈，SG 函数，威佐夫博弈</p>
 <h2 id="others">Others</h2>
-<p>位运算，读入挂，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
+<p>位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
 ]]></content>
       
         <categories>
