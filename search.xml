@@ -3,6 +3,29 @@
   
     
     <entry>
+      <title><![CDATA[Binary Search]]></title>
+      <url>/Basics/binary-search/</url>
+      <content type="html"><![CDATA[<h2 id="最小化最大值">最小化最大值</h2>
+<p>区间设定左开右闭——(lb, ub]</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (ub - lb &gt; <span class="number">1</span>) &#123;</div><div class="line">  <span class="keyword">int</span> mid = (ub - lb) / <span class="number">2</span> + lb;</div><div class="line">  <span class="keyword">if</span> (C(mid)) ub = mid;</div><div class="line">  <span class="keyword">else</span> lb = mid;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> ub;</div></pre></td></tr></table></figure>
+<h2 id="最大化最小值">最大化最小值</h2>
+<p>区间设定左闭右开——[lb, ub)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (ub - lb &gt; <span class="number">1</span>) &#123;</div><div class="line">  <span class="keyword">int</span> mid = (ub - lb) / <span class="number">2</span> + lb;</div><div class="line">  <span class="keyword">if</span> (C(mid)) lb = mid;</div><div class="line">  <span class="keyword">else</span> ub = mid;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> lb;</div></pre></td></tr></table></figure>
+<h2 id="浮点数">浮点数</h2>
+<p>浮点数二分一般直接指定循环次数（100次）作为终止条件。1次循环可以把区间的范围缩小一半，100次的循环则可以达到 <span class="math inline">\(2^{−100}≈10^{−30}\)</span> 的精度范围。（如果设置终止条件为 <span class="math inline">\(ub - lb &gt; eps\)</span> 可能因为 <span class="math inline">\(eps\)</span> 取太小浮点小数精度的原因导致陷入死循环。)</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</div><div class="line">  <span class="keyword">double</span> mid = (lb + ub) / <span class="number">2</span>;</div><div class="line">  <span class="keyword">if</span> (C(mid)) lb = mid;</div><div class="line">  <span class="keyword">else</span> ub = mid;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> lb;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> Basics </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[cpp-fastIO]]></title>
       <url>/Others/cpp-fastIO/</url>
       <content type="html"><![CDATA[<h2 id="关同步">关同步</h2>
