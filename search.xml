@@ -3,7 +3,30 @@
   
     
     <entry>
-      <title><![CDATA[topological-sorting]]></title>
+      <title><![CDATA[tips]]></title>
+      <url>/Others/tips/</url>
+      <content type="html"><![CDATA[<ol style="list-style-type: decimal">
+<li>sort 自定义比较函数 cmp 中用 = 号会 T</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> Others </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> tips </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Topological Sorting]]></title>
       <url>/Graph/topological-sorting/</url>
       <content type="html"><![CDATA[<h2 id="dfs">DFS</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</div><div class="line">    c[u] = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> v = <span class="number">1</span>; v &lt;= n; v++)</div><div class="line">        <span class="keyword">if</span> (G[u][v]) &#123;</div><div class="line">            <span class="keyword">if</span> (c[v] &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (!c[v] &amp;&amp; !dfs(v)) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">    c[u] = <span class="number">1</span>; topo[--t] = u;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">toposort</span><span class="params">()</span> </span>&#123;</div><div class="line">    t = n;</div><div class="line">    <span class="built_in">memset</span>(c, <span class="number">0</span>, <span class="keyword">sizeof</span> c);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</div><div class="line">        <span class="keyword">if</span> (!c[i]) <span class="keyword">if</span> (!dfs(i)) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -23,6 +46,12 @@
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> topological-sorting </tag>
+            
+        </tags>
         
     </entry>
     
@@ -46,6 +75,12 @@
             
         </categories>
         
+        
+        <tags>
+            
+            <tag> binary-search </tag>
+            
+        </tags>
         
     </entry>
     
@@ -71,8 +106,6 @@
         
         
         <tags>
-            
-            <tag> cpp </tag>
             
             <tag> fastIO </tag>
             
@@ -100,7 +133,7 @@
 <h2 id="game-theory">Game theory</h2>
 <p>Nim 博弈，双人零和矩阵博弈，SG 函数，威佐夫博弈</p>
 <h2 id="others">Others</h2>
-<p>位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
+<p>tips，位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
 ]]></content>
       
         <categories>

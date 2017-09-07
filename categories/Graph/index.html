@@ -52,7 +52,7 @@
 
 <div class="row page">
 	<div class="col-md-12">
-        <input type="text" id="local-search-input" name="q" results="0" placeholder="search notes..." class="st-search-input st-default-search-input form-control" style="margin-bottom:1em"/>
+        <input type="text" id="local-search-input" name="q" results="0" placeholder="查找笔记……" class="st-search-input st-default-search-input form-control" style="margin-bottom:1em"/>
         <div id="local-search-result"></div>
 		<div class="panel-group" id="notebook">
 			
@@ -75,6 +75,8 @@
 								
 								    
 								        <li class="post-list-item"><a href="/ACM/skill-tree/">Skill Tree</a></li>
+								    
+								
 								    
 								
 								    
@@ -113,6 +115,8 @@
 								
 								    
 								
+								    
+								
 							</ul>
 						</div>
 					</div>
@@ -140,7 +144,9 @@
 								    
 								
 								    
-								        <li class="post-list-item"><a href="/Graph/topological-sorting/">topological-sorting</a></li>
+								        <li class="post-list-item"><a href="/Graph/topological-sorting/">Topological Sorting</a></li>
+								    
+								
 								    
 								
 							</ul>
@@ -171,6 +177,10 @@
 								
 								    
 								
+								    
+								
+								    
+								        <li class="post-list-item"><a href="/Others/tips/">tips</a></li>
 								    
 								
 							</ul>
@@ -204,9 +214,13 @@
 			
 			
 			
+			
+			
 			    
 			                    
 			                    <li class="post-list-item"><a href="/uncategorized/tag-plugins/">tag-plugins</a></li>
+			                    
+			    
 			                    
 			    
 			                    
@@ -270,8 +284,23 @@
 	 }
 	 var path = "/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+   </script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

@@ -84,7 +84,7 @@
 <h2 id="game-theory">Game theory</h2>
 <p>Nim 博弈，双人零和矩阵博弈，SG 函数，威佐夫博弈</p>
 <h2 id="others">Others</h2>
-<p>位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
+<p>tips，位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
 	  
 
 	  <div>
@@ -96,6 +96,8 @@
 	
 	
 	
+	
+		
 	
 		
 	
@@ -174,8 +176,23 @@
 	 }
 	 var path = "/" + search_path;
      searchFunc(path, 'local-search-input', 'local-search-result');
-   </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+   </script>
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
