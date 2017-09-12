@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[Union-find Set]]></title>
+      <url>/Date-Structure/union-find-set/</url>
+      <content type="html"><![CDATA[<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> par[maxn], rnk[maxn];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        par[i] = i; rnk[i] = <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> x == par[x]? x : par[x] = find(par[x]);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">same</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> find(x) == find(y);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">unite</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</div><div class="line">    x = find(x); y = find(y);</div><div class="line">    <span class="keyword">if</span> (x == y) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">if</span> (rnk[x] &lt; rnk[y]) par[x] = y;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        par[y] = x;</div><div class="line">        <span class="keyword">if</span> (rnk[x] == rnk[y]) rnk[x]++;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+      
+        <categories>
+            
+            <category> Date Structure </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> union-find-set </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[tips]]></title>
       <url>/Others/tips/</url>
       <content type="html"><![CDATA[<ol style="list-style-type: decimal">
@@ -121,7 +142,7 @@
 <h2 id="dp">DP</h2>
 <p>背包、集合、序列dp，斜率优化，四边形不等式，DP优化（降维、离散化，单调队列，树状数组），区间dp，概率dp，树形dp，状压dp，轮廓线dp，插头dp，数位dp</p>
 <h2 id="data-structure">Data Structure</h2>
-<p>线段树，树状数组，zkw 线段树，LCA &amp;&amp; RMQ，K-D tree，主席树，splay，划分树，树链剖分，树分治，左偏树、斜堆</p>
+<p><del>并查集</del>，线段树，树状数组，zkw 线段树，LCA &amp;&amp; RMQ，K-D tree，主席树，splay，划分树，树链剖分，树分治，左偏树、斜堆</p>
 <h2 id="string">String</h2>
 <p>Hash，字符串最小最大表示，KMP，Extend KMP，trie，Manacher，AC自动机，后缀数组，后缀树，后缀自动机，回文自动机</p>
 <h2 id="graph">Graph</h2>
@@ -133,7 +154,7 @@
 <h2 id="game-theory">Game theory</h2>
 <p>Nim 博弈，双人零和矩阵博弈，SG 函数，威佐夫博弈</p>
 <h2 id="others">Others</h2>
-<p>tips，位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
+<p><del>tips</del>，位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
 ]]></content>
       
         <categories>
