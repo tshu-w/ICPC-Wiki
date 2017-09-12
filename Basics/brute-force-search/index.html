@@ -3,7 +3,7 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Topological Sorting | Wiki</title>
+  <title>Brute-force Search | Wiki</title>
   <meta name="author" content="Tianshu Wang">
   
   <meta name="description" content="Tianshu Wang&#39;s Personal Wiki Page">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Topological Sorting"/>
+  <meta property="og:title" content="Brute-force Search"/>
   <meta property="og:site_name" content="Wiki"/>
 
   
@@ -45,38 +45,25 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">Wiki</a><span class="split"></span><span class="title">Topological Sorting</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-09-06</span></h1>
+  <h1><a class="brand" href="/">Wiki</a><span class="split"></span><span class="title">Brute-force Search</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-09-12</span></h1>
 </div>		
 
 <div class="row page">
   <!-- cols -->	
   
-  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
-	<!-- toc -->
-<script type="text/javascript">
-		jQuery(document).ready(function() {
- 		   generateWikiTOC('.note', '.toc',  2 , 2 );
-		});
-</script>
-  </div><!-- col-md-3 -->
-  
   
 
   
-  <div class="col-xs-12 col-sm-9 col-md-9 note">
-	
+	<div class="col-md-12">
+	  
 
 	  <!-- content -->
-	  <h2 id="dfs">DFS</h2>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> u)</span> </span>&#123;</div><div class="line">    c[u] = <span class="number">-1</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> v = <span class="number">1</span>; v &lt;= n; v++)</div><div class="line">        <span class="keyword">if</span> (G[u][v]) &#123;</div><div class="line">            <span class="keyword">if</span> (c[v] &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (!c[v] &amp;&amp; !dfs(v)) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125;</div><div class="line">    c[u] = <span class="number">1</span>; topo[--t] = u;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">bool</span> <span class="title">toposort</span><span class="params">()</span> </span>&#123;</div><div class="line">    t = n;</div><div class="line">    <span class="built_in">memset</span>(c, <span class="number">0</span>, <span class="keyword">sizeof</span> c);</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</div><div class="line">        <span class="keyword">if</span> (!c[i]) <span class="keyword">if</span> (!dfs(i)) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="indegree">Indegree</h2>
-<p>算法描述：</p>
-<ol style="list-style-type: decimal">
-<li>选择一个入度为 0 的顶点并输出；</li>
-<li>然后从 AOV 网中删除此顶点及以此结点为起点的所有关联边（更新终点的入度）；</li>
-<li>重复 1，2 两步直到不存在入度为 0 的顶点为止；</li>
-<li>若输出的顶点小于网络中的顶点数，则有回路，否则输出结点序列为拓扑序列。</li>
-</ol>
+	  <h2 id="排列枚举">排列枚举</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">do</span> &#123;</div><div class="line"></div><div class="line">&#125; <span class="keyword">while</span> (next_permutation(A, A + n)); <span class="comment">// prev_permutation</span></div></pre></td></tr></table></figure>
+<h2 id="子集枚举">子集枚举</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> sub = sup;</div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">    sub = (sub - <span class="number">1</span>) &amp; sup;</div><div class="line">&#125; <span class="keyword">while</span> (sub != sup); <span class="comment">// -1 &amp; sup = sup;</span></div></pre></td></tr></table></figure>
+<h2 id="势为-k-的集合枚举">势为 k 的集合枚举</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 势为 k 的集合枚举</span></div><div class="line"><span class="keyword">int</span> comb = (<span class="number">1</span> &lt;&lt; k) - <span class="number">1</span>;</div><div class="line"><span class="keyword">while</span> (comb &lt; <span class="number">1</span> &lt;&lt; n) &#123;</div><div class="line">    <span class="keyword">int</span> x = comb &amp; -comb, y = comb + x;</div><div class="line">    comb = ((comb &amp; ~y) / x &gt;&gt; <span class="number">1</span>) | y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 	  
 
 	  <div>
@@ -90,6 +77,11 @@
 	
 	
 		
+			
+			
+		
+	
+		
 	
 		
 	
@@ -98,10 +90,7 @@
 		
 			
 			
-		
-	
-		
-	
+			
 		
 	
 		
@@ -116,7 +105,7 @@
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next"><a href="/Basics/binary-search/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>
