@@ -3,7 +3,7 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Binary Search | Wiki</title>
+  <title>shiftAnd | Wiki</title>
   <meta name="author" content="Tianshu Wang">
   
   <meta name="description" content="Tianshu Wang&#39;s Personal Wiki Page">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Binary Search"/>
+  <meta property="og:title" content="shiftAnd"/>
   <meta property="og:site_name" content="Wiki"/>
 
   
@@ -45,37 +45,24 @@
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">Wiki</a><span class="split"></span><span class="title">Binary Search</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-09-04</span></h1>
+  <h1><a class="brand" href="/">Wiki</a><span class="split"></span><span class="title">shiftAnd</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2017-10-02</span></h1>
 </div>		
 
 <div class="row page">
   <!-- cols -->	
   
-  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
-	<!-- toc -->
-<script type="text/javascript">
-		jQuery(document).ready(function() {
- 		   generateWikiTOC('.note', '.toc',  2 , 2 );
-		});
-</script>
-  </div><!-- col-md-3 -->
-  
   
 
   
-  <div class="col-xs-12 col-sm-9 col-md-9 note">
-	
+	<div class="col-md-12">
+	  
 
 	  <!-- content -->
-	  <h2 id="最小化最大值">最小化最大值</h2>
-<p>区间设定左开右闭——(lb, ub]</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (ub - lb &gt; <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">int</span> mid = (ub - lb) / <span class="number">2</span> + lb;</div><div class="line">    <span class="keyword">if</span> (C(mid)) ub = mid;</div><div class="line">    <span class="keyword">else</span> lb = mid;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> ub;</div></pre></td></tr></table></figure>
-<h2 id="最大化最小值">最大化最小值</h2>
-<p>区间设定左闭右开——[lb, ub)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (ub - lb &gt; <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">int</span> mid = (ub - lb) / <span class="number">2</span> + lb;</div><div class="line">    <span class="keyword">if</span> (C(mid)) lb = mid;</div><div class="line">    <span class="keyword">else</span> ub = mid;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> lb;</div></pre></td></tr></table></figure>
-<h2 id="浮点数">浮点数</h2>
-<p>浮点数二分一般直接指定循环次数（100次）作为终止条件。1次循环可以把区间的范围缩小一半，100次的循环则可以达到 <span class="math inline">\(2^{−100}≈10^{−30}\)</span> 的精度范围。（如果设置终止条件为 <span class="math inline">\(ub - lb &gt; eps\)</span> 可能因为 <span class="math inline">\(eps\)</span> 取太小浮点小数精度的原因导致陷入死循环。)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</div><div class="line">    <span class="keyword">double</span> mid = (lb + ub) / <span class="number">2</span>;</div><div class="line">    <span class="keyword">if</span> (C(mid)) lb = mid;</div><div class="line">    <span class="keyword">else</span> ub = mid;</div><div class="line">&#125;</div><div class="line"><span class="keyword">return</span> lb;</div></pre></td></tr></table></figure>
+	  <h2 id="shiftand">shiftAnd</h2>
+<p>主串 s[0…n] 模式串 t[0..m] bitset D 中 D[j] = 1 表示模式串前缀 <span class="math inline">\(t_0,...,t_j\)</span> 是主串 <span class="math inline">\(s_0,...,s_i\)</span> 的后缀。 D = (D &lt;&lt; 1 | 1) &amp; B[s[i + 1]]</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">bitset</span>&lt;maxm&gt; D, S[<span class="number">256</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">shiftAnd</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</div><div class="line">    D.reset();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        D &lt;&lt;= <span class="number">1</span>; D.<span class="built_in">set</span>(<span class="number">0</span>);</div><div class="line">        D &amp;= B[s[i]];</div><div class="line">        <span class="keyword">if</span> (D[m - <span class="number">1</span>]) &#123;</div><div class="line">            <span class="keyword">char</span> tmp = s[i + <span class="number">1</span>];</div><div class="line">            s[i + <span class="number">1</span>] = <span class="string">'\0'</span>;</div><div class="line">            <span class="built_in">puts</span>(s + (i - n + <span class="number">1</span>));</div><div class="line">            s[i + <span class="number">1</span>] = tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="shiftor">shiftOr</h2>
+<p>为减少位运算， bitset D 中 D[j] = 0 表示模式串前缀 <span class="math inline">\(t_0,...,t_j\)</span> 是主串 <span class="math inline">\(s_0,...,s_i\)</span> 的后缀</p>
 	  
 
 	  <div>
@@ -89,20 +76,6 @@
 	
 	
 		
-	
-		
-	
-		
-			
-		
-	
-		
-	
-		
-	
-		
-	
-		
 			
 			
 		
@@ -115,9 +88,21 @@
 	
 		
 	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
 	
 	
-		<li class="prev"><a href="/Basics/brute-force-search/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	

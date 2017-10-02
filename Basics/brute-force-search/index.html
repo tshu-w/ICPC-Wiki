@@ -63,7 +63,10 @@
 <h2 id="子集枚举">子集枚举</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> sub = sup;</div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">    sub = (sub - <span class="number">1</span>) &amp; sup;</div><div class="line">&#125; <span class="keyword">while</span> (sub != sup); <span class="comment">// -1 &amp; sup = sup;</span></div></pre></td></tr></table></figure>
 <h2 id="势为-k-的集合枚举">势为 k 的集合枚举</h2>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 势为 k 的集合枚举</span></div><div class="line"><span class="keyword">int</span> comb = (<span class="number">1</span> &lt;&lt; k) - <span class="number">1</span>;</div><div class="line"><span class="keyword">while</span> (comb &lt; <span class="number">1</span> &lt;&lt; n) &#123;</div><div class="line">    <span class="keyword">int</span> x = comb &amp; -comb, y = comb + x;</div><div class="line">    comb = ((comb &amp; ~y) / x &gt;&gt; <span class="number">1</span>) | y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> comb = (<span class="number">1</span> &lt;&lt; k) - <span class="number">1</span>;</div><div class="line"><span class="keyword">while</span> (comb &lt; <span class="number">1</span> &lt;&lt; n) &#123;</div><div class="line">    <span class="keyword">int</span> x = comb &amp; -comb, y = comb + x;</div><div class="line">    comb = ((comb &amp; ~y) / x &gt;&gt; <span class="number">1</span>) | y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="高维前缀和子集超集和">高维前缀和(子集/超集和)</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 子集和</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> s = <span class="number">0</span>; s &lt; <span class="number">1</span> &lt;&lt; k; s++)</div><div class="line">        <span class="keyword">if</span> (s &gt;&gt; i &amp; <span class="number">1</span>) cnt[s] += cnt[s ^ (<span class="number">1</span> &lt;&lt; i)];</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 超集和</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> s = <span class="number">0</span>; s &lt; <span class="number">1</span> &lt;&lt; k; s++)</div><div class="line">        <span class="keyword">if</span> (!(s &gt;&gt; i &amp; <span class="number">1</span>)) cnt[s] += cnt[s | (<span class="number">1</span> &lt;&lt; i)];</div></pre></td></tr></table></figure>
 	  
 
 	  <div>
@@ -75,6 +78,8 @@
 	
 	
 	
+	
+		
 	
 		
 	

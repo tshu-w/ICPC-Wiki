@@ -3,6 +3,25 @@
   
     
     <entry>
+      <title><![CDATA[shiftAnd]]></title>
+      <url>/String/shiftAnd/</url>
+      <content type="html"><![CDATA[<h2 id="shiftand">shiftAnd</h2>
+<p>主串 s[0…n] 模式串 t[0..m] bitset D 中 D[j] = 1 表示模式串前缀 <span class="math inline">\(t_0,...,t_j\)</span> 是主串 <span class="math inline">\(s_0,...,s_i\)</span> 的后缀。 D = (D &lt;&lt; 1 | 1) &amp; B[s[i + 1]]</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">bitset</span>&lt;maxm&gt; D, S[<span class="number">256</span>];</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">shiftAnd</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span> m)</span> </span>&#123;</div><div class="line">    D.reset();</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</div><div class="line">        D &lt;&lt;= <span class="number">1</span>; D.<span class="built_in">set</span>(<span class="number">0</span>);</div><div class="line">        D &amp;= B[s[i]];</div><div class="line">        <span class="keyword">if</span> (D[m - <span class="number">1</span>]) &#123;</div><div class="line">            <span class="keyword">char</span> tmp = s[i + <span class="number">1</span>];</div><div class="line">            s[i + <span class="number">1</span>] = <span class="string">'\0'</span>;</div><div class="line">            <span class="built_in">puts</span>(s + (i - n + <span class="number">1</span>));</div><div class="line">            s[i + <span class="number">1</span>] = tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="shiftor">shiftOr</h2>
+<p>为减少位运算， bitset D 中 D[j] = 0 表示模式串前缀 <span class="math inline">\(t_0,...,t_j\)</span> 是主串 <span class="math inline">\(s_0,...,s_i\)</span> 的后缀</p>
+]]></content>
+      
+        <categories>
+            
+            <category> String </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[bitset]]></title>
       <url>/Others/bitset/</url>
       <content type="html"><![CDATA[<h2 id="applicable-operators">Applicable operators</h2>
@@ -32,7 +51,10 @@
 <h2 id="子集枚举">子集枚举</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> sub = sup;</div><div class="line"><span class="keyword">do</span> &#123;</div><div class="line">    sub = (sub - <span class="number">1</span>) &amp; sup;</div><div class="line">&#125; <span class="keyword">while</span> (sub != sup); <span class="comment">// -1 &amp; sup = sup;</span></div></pre></td></tr></table></figure>
 <h2 id="势为-k-的集合枚举">势为 k 的集合枚举</h2>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 势为 k 的集合枚举</span></div><div class="line"><span class="keyword">int</span> comb = (<span class="number">1</span> &lt;&lt; k) - <span class="number">1</span>;</div><div class="line"><span class="keyword">while</span> (comb &lt; <span class="number">1</span> &lt;&lt; n) &#123;</div><div class="line">    <span class="keyword">int</span> x = comb &amp; -comb, y = comb + x;</div><div class="line">    comb = ((comb &amp; ~y) / x &gt;&gt; <span class="number">1</span>) | y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> comb = (<span class="number">1</span> &lt;&lt; k) - <span class="number">1</span>;</div><div class="line"><span class="keyword">while</span> (comb &lt; <span class="number">1</span> &lt;&lt; n) &#123;</div><div class="line">    <span class="keyword">int</span> x = comb &amp; -comb, y = comb + x;</div><div class="line">    comb = ((comb &amp; ~y) / x &gt;&gt; <span class="number">1</span>) | y;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="高维前缀和子集超集和">高维前缀和(子集/超集和)</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 子集和</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> s = <span class="number">0</span>; s &lt; <span class="number">1</span> &lt;&lt; k; s++)</div><div class="line">        <span class="keyword">if</span> (s &gt;&gt; i &amp; <span class="number">1</span>) cnt[s] += cnt[s ^ (<span class="number">1</span> &lt;&lt; i)];</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 超集和</span></div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; k; i++)</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> s = <span class="number">0</span>; s &lt; <span class="number">1</span> &lt;&lt; k; s++)</div><div class="line">        <span class="keyword">if</span> (!(s &gt;&gt; i &amp; <span class="number">1</span>)) cnt[s] += cnt[s | (<span class="number">1</span> &lt;&lt; i)];</div></pre></td></tr></table></figure>
 ]]></content>
       
         <categories>
@@ -188,13 +210,13 @@
       <title><![CDATA[Skill Tree]]></title>
       <url>/ACM/skill-tree/</url>
       <content type="html"><![CDATA[<h2 id="basics">Basics</h2>
-<p><del>时间复杂度</del>，<del>暴力</del>，DFS，BFS，贪心，<del>二分</del>，三分，栈，队列，堆，STL，C++11</p>
+<p><del>时间复杂度</del>，<del>暴力</del>，DFS，BFS，贪心，<del>二分</del>，三分，栈，队列，堆，STL</p>
 <h2 id="dp">DP</h2>
 <p>背包、集合、序列dp，斜率优化，四边形不等式，DP优化（降维、离散化，单调队列，树状数组），区间dp，概率dp，树形dp，状压dp，轮廓线dp，插头dp，数位dp</p>
 <h2 id="data-structure">Data Structure</h2>
 <p><del>并查集</del>，线段树，树状数组，zkw 线段树，LCA &amp;&amp; RMQ，K-D tree，主席树，splay，划分树，树链剖分，树分治，左偏树、斜堆</p>
 <h2 id="string">String</h2>
-<p>Hash，字符串最小最大表示，KMP，Extend KMP，trie，Manacher，AC自动机，后缀数组，后缀树，后缀自动机，回文自动机</p>
+<p>Hash，字符串最小最大表示，KMP，Extend KMP，shiftAnd/shiftOr, trie，Manacher，AC自动机，后缀数组，后缀树，后缀自动机，回文自动机</p>
 <h2 id="graph">Graph</h2>
 <p>最短路（Floyd，Spfa，Dijstra），最小生成树（Prim，Kruskal） <del>拓扑排序</del>，割点，割边，<del>欧拉路径，欧拉回路，汉密尔顿回路</del>，差分约束系统，二分匹配（匈牙利），2-SAT 二分图（最大匹配、完备匹配、最优匹配，Hopcroft-Carp），网络流，费用流，次（k）小生成树，度限制最小生成树，(可重复/不可重复)K短路(曹氏短边法)，最优比率生成树，最优比例环，最小树形图，无(有)向图的最小环，最大团搜索，极大团计数，带花树，稳定婚姻匹配，斯坦纳树，全局最小割，平面图最小生成树(nlgn)，网络流与线性规划</p>
 <h2 id="math">Math</h2>
