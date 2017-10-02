@@ -3,6 +3,28 @@
   
     
     <entry>
+      <title><![CDATA[bitset]]></title>
+      <url>/Others/bitset/</url>
+      <content type="html"><![CDATA[<h2 id="applicable-operators">Applicable operators</h2>
+<p><code>&amp;= |= ^= &lt;&lt;= &gt;&gt;= ~ &lt;&lt; &gt;&gt; == != &amp; | ^</code></p>
+<h2 id="bit-access">Bit access</h2>
+<p><code>[] count size test any none all(c++11)</code></p>
+<h2 id="bit-operations">Bit operations</h2>
+<p><code>set reset flip</code></p>
+<h2 id="bitset-operations">Bitset operations</h2>
+<p><code>to_string to_ulong to_ullong</code></p>
+]]></content>
+      
+        <categories>
+            
+            <category> Others </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Brute-force Search]]></title>
       <url>/Basics/brute-force-search/</url>
       <content type="html"><![CDATA[<h2 id="排列枚举">排列枚举</h2>
@@ -182,7 +204,7 @@
 <h2 id="game-theory">Game theory</h2>
 <p>Nim 博弈，双人零和矩阵博弈，SG 函数，威佐夫博弈</p>
 <h2 id="others">Others</h2>
-<p><del>tips</del>，位运算，<del>cpp读入挂</del>，bitset，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
+<p><del>tips</del>，位运算，<del>cpp读入挂</del>，<del>bitset</del>，高精度，Java大数，分快，莫队，树的重心与直径，模拟退火，DLX，∂-ß 剪枝，黄金分割搜索，拟阵，对拍，vim 配置</p>
 ]]></content>
       
         <categories>
