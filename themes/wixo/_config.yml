@@ -1,0 +1,10 @@
+rss: atom.xml
+fancybox: true
+favicon: favicon.ico
+inverse_sort: false
+fold: true
+google_analytics:
+scratch_name: Uncategorized
+search:
+  path: search.xml
+  field: all
