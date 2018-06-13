@@ -130,7 +130,7 @@ for (int i = 0; i < N; ++i)
 
 + 完全背包
 
-$$f[i, j] = max(f[i - 1, j], f[i, j - w[i]] + j[i])$$
+$$f[i, j] = max(f[i - 1, j], f[i, j - w[i]] + v[i])$$
 
 ```c++
 for (int i = 0; i < N; ++i)
@@ -1097,7 +1097,7 @@ struct Point {
     Point operator + (Point p) { return Point(x + p.x, y + p.y); }
     Point operator - (Point p) { return Point(x - p.x, y - p.y); }
     Point operator * (double d) { return Point(x * d, y * d); }
-    bool operator < (Point p) { return x != p.x? x < p.x : y < p.y; }
+    bool operator < (Point p) const { return x != p.x? x < p.x : y < p.y; }
     double dot(Point p) { return add(x * p.x, y * p.y); }// 内积
     double det(Point p) { return add(x * p.y, -y * p.x); }// 外积
     Point ver() { return Point(-y, x); }
