@@ -1,10 +1,10 @@
 rss: atom.xml
 fancybox: true
 favicon: favicon.ico
-inverse_sort: false
-fold: true
+inverse_sort: false  # Whether to sort all notes inversely
+fold: true  # Whether to fold all the notebooks initially
+scratch_name: Uncategorized  # Notebook name of posts without categories variables
 google_analytics:
-scratch_name: Uncategorized
 search:
   path: search.xml
   field: all
